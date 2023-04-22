@@ -1,10 +1,9 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import styles from "./Footer.module.scss";
+import styles from "./NavLinks.module.scss";
 
-export default function Footer() {
+export default function NavLinks() {
   return (
-    <div className={styles.Footer}>
+    <div className={styles.NavLinks}>
       <div className={styles.flex}>
         <Link className={styles.link} to="/">
           Home
@@ -22,11 +21,6 @@ export default function Footer() {
           Products
         </Link>
       </div>
-      {/* <div>
-        <Link className={styles.link} to="/admin">
-          Services
-        </Link>
-      </div> */}
     </div>
   );
 }

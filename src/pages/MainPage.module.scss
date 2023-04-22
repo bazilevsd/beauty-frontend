@@ -1,0 +1,19 @@
+.MainPage {
+  width: 100vw;
+  z-index: 1;
+}
+.img {
+  width: 100vw;
+}
+.img1 {
+  width: 20vw;
+  height: 30vh;
+
+  float: left;
+  margin: 5px;
+
+  object-fit: cover;
+}
+.intro {
+  margin: 25px;
+}

@@ -1,0 +1,35 @@
+.BookUser {
+  width: 90vw;
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  margin: 30px;
+  background-color: white;
+}
+.bookTitle {
+  margin-bottom: 30px;
+  color: #c58940;
+}
+.booking__form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+.bookTitle {
+  margin-bottom: 30px;
+  color: #6b5a87;
+}
+.bookingBtn {
+  margin-top: 20px;
+  background-color: #6b5a87;
+  color: rgb(255, 255, 255);
+}
+.select {
+  padding: 10px;
+  min-width: 150px;
+}

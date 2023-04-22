@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Products from "./pages/Products";
+import Admin from "./pages/Admin";
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

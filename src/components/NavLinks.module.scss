@@ -1,0 +1,18 @@
+.NavLinks {
+  padding: 0px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  z-index: 6;
+  background-color: rgb(216, 206, 234);
+  //   background-color: #fee6f6;
+  color: rgb(36, 26, 36);
+  padding: 8px;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(36, 26, 36);
+}

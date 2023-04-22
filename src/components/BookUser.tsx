@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useScheduleStore } from "../stores/useScheduleStore";
 import { sendEmail } from "../utilities/email";
+import styles from "./BookUser.module.scss";
 
 export default function BookUser() {
   const [fullName, setFullName] = useState("");
@@ -37,64 +38,69 @@ export default function BookUser() {
   // 		setReceiverEmail
   // 	);
   // }, [user]);
+  useEffect(() => {
+    getAllSchedules();
+  }, []);
 
   return (
-    <div className="bookContainer">
-      <h2 className="bookTitle">Book a session with {user}</h2>
-      {/* <form onSubmit={handleSubmit} className="booking__form"> */}
-      <label htmlFor="fullName">Full Name</label>
-      <input
-        id="fullName"
-        name="fullName"
-        type="text"
-        required
-        value={fullName}
-        onChange={(e) => setFullName(e.target.value)}
-      />
-      <label htmlFor="email">Email Address</label>
-      <input
-        id="email"
-        name="email"
-        required
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
+    <div className={styles.BookUser}>
+      <h2 className={styles.bookTitle}>Book a session with {user}</h2>
+      <div className={styles.booking__form}>
+        <label htmlFor="fullName">Full Name</label>
+        <input
+          id="fullName"
+          name="fullName"
+          type="text"
+          required
+          value={fullName}
+          onChange={(e) => setFullName(e.target.value)}
+        />
+        <label htmlFor="email">Email Address</label>
+        <input
+          id="email"
+          name="email"
+          required
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
 
-      <label htmlFor="message">Any important note? (optional)</label>
-      <textarea
-        rows={5}
-        name="message"
-        id="message"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-      />
+        <label htmlFor="message">Any important note? (optional)</label>
+        <textarea
+          rows={5}
+          name="message"
+          id="message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        />
 
-      <label htmlFor="session">
-        Select your preferred session - GMT+2 Jerusalem
-      </label>
+        <label htmlFor="session">Select your preferred session</label>
 
-      {schedules.map((instance) => {
-        return (
-          <select name="duration" onChange={(e) => setDuration(e.target.value)}>
-            {instance.schedule.map((schedule: Schedule) => {
-              console.log("one schedule", schedule);
+        {schedules.map((instance) => {
+          return (
+            <select
+              className={styles.select}
+              name="duration"
+              onChange={(e) => setDuration(e.target.value)}
+            >
+              {instance.schedule.map((schedule: Schedule) => {
+                console.log("one schedule", schedule);
 
-              return (
-                <option
-                  value={`${schedule.day} - ${schedule.startTime} : ${schedule.endTime}`}
-                  key={schedule.day}
-                >{`${schedule.day} - ${schedule.startTime} : ${schedule.endTime}`}</option>
-              );
-            })}
-          </select>
-        );
-      })}
+                return (
+                  <option
+                    value={`${schedule.day} - ${schedule.startTime} : ${schedule.endTime}`}
+                    key={schedule.day}
+                  >{`${schedule.day} - ${schedule.startTime} : ${schedule.endTime}`}</option>
+                );
+              })}
+            </select>
+          );
+        })}
 
-      <button className="bookingBtn" onClick={handleSubmit}>
-        SEND
-      </button>
-      {/* </form> */}
+        <button className={styles.bookingBtn} onClick={handleSubmit}>
+          SEND
+        </button>
+      </div>
     </div>
   );
 }

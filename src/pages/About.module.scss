@@ -1,0 +1,27 @@
+.About {
+  width: 100vw;
+}
+
+.img1 {
+  float: left;
+  margin: 5px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+.p {
+  text-align: justify;
+  font-size: 18px;
+}
+
+.img2 {
+  float: right;
+  margin: 5px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+.article {
+  margin: 50px;
+  min-height: 100vh;
+}

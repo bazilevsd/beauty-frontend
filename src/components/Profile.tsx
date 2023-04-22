@@ -15,8 +15,7 @@ export default function Profile() {
   return (
     <div className="profile">
       <div style={{ width: "70%" }}>
-        <h2>Hey, nevodavid</h2>
-        <p>Here is your schedule: WAT</p>
+        <h2>Here is your schedule:</h2>
 
         {schedules.map((instance) => {
           console.log("one sch", instance);

@@ -1,0 +1,25 @@
+.Footer {
+  display: flex;
+  justify-content: center;
+  // background-color: rgb(251, 172, 185);
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(216, 188, 244),
+    rgb(30, 7, 55)
+  );
+  margin-top: auto;
+  bottom: 0;
+}
+.link {
+  text-decoration: none;
+  color: rgb(36, 26, 36);
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: none;
+  //   background-color: #fee6f6;
+  color: rgb(36, 26, 36);
+}

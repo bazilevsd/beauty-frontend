@@ -1,0 +1,17 @@
+.Products {
+  background-color: white;
+}
+.img {
+  width: 20vw;
+  height: 30vh;
+
+  float: left;
+  margin: 5px;
+
+  object-fit: cover;
+}
+.block {
+  display: flex;
+  margin: 20px;
+  background-color: white;
+}

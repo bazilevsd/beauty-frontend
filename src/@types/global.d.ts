@@ -3,6 +3,7 @@ interface Schedule {
   day?: string;
   startTime?: string;
   endTime?: string;
+  token?: string;
 }
 
 interface Schedules {
@@ -19,4 +20,21 @@ interface Book {
   email: string;
   fullName: string;
   message: string;
+}
+
+interface UserData {
+  name: string;
+  email: string;
+  password: string;
+  confirm: string;
+  error: string;
+}
+
+interface Credentials {
+  email: string;
+  password: string;
+}
+
+interface Token {
+  token: string;
 }
