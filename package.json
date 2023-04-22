@@ -43,5 +43,8 @@
       "YOUR_SERVICE_ID"
     ]
   },
+  "engines": {
+    "node": "18.15.0"
+  },
   "proxy": "http://localhost:3000"
 }
