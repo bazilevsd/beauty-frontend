@@ -7,6 +7,7 @@ import image3 from "/services3.jpg";
 import image4 from "/services4.jpg";
 import styles from "./Services.module.scss";
 import { Link } from "react-router-dom";
+import { style } from "@mui/system";
 
 export default function Services() {
   const [pageName, setPageName] = useState("Products");
@@ -15,7 +16,7 @@ export default function Services() {
     <div>
       <Header text={pageName} />
       <Link className={styles.link} to="/">
-        <button>Book a session </button>
+        <div className={styles.book}>Book a session </div>
       </Link>
       <div>
         <div className={styles.block}>

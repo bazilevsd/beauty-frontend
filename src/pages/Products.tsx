@@ -15,7 +15,7 @@ export default function Products() {
       <Header text={pageName} />
       <div>
         <Link className={styles.link} to="/">
-          <button>Book a session </button>
+          <div className={styles.book}>Book a session </div>
         </Link>
         <div className={styles.block}>
           <img className={styles.img} src={image1} alt="blog-image-1.jpeg" />

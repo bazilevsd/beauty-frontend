@@ -1,10 +1,19 @@
 import { Link } from "react-router-dom";
 import styles from "./NavLinks.module.scss";
-
-export default function NavLinks() {
+//@ts-ignore
+export default function NavLinks({ open, onClose }) {
+  if (!open) return null;
   return (
-    <div className={styles.NavLinks}>
-      <div className={styles.flex}>
+    <div onClick={onClose} className={styles.NavLinks}>
+      <div
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+        className={styles.flex}
+      >
+        <p onClick={onClose} className={styles.closeBtn}>
+          X
+        </p>
         <Link className={styles.link} to="/">
           Home
         </Link>

@@ -38,3 +38,7 @@ interface Credentials {
 interface Token {
   token: string;
 }
+
+interface Open {
+  open: boolean;
+}

@@ -10,6 +10,7 @@ import image1 from "/blog-image-2.jpeg";
 import Footer from "../components/Footer";
 import styles from "./MainPage.module.scss";
 import image11 from "/img11.jpg";
+import styless from "../components/Title.module.scss";
 
 //👇🏻 React-Toastify configuration
 import { ToastContainer } from "react-toastify";
@@ -21,6 +22,10 @@ export default function MainPage() {
   return (
     <div>
       {/* Main Page */}
+      {/* <div className={styless.wrapper}>
+        <div className={styless.bg}>Nano Tam</div>
+        <div className={styless.bg}>Nano Tam</div>
+      </div> */}
       <Header text={pageName} />
       <div className={styles.MainPage}>
         <img className={styles.img} src={image1} alt="blog-image-1.jpeg" />
@@ -57,6 +62,7 @@ export default function MainPage() {
       {/* <Dashboard /> */}
       {/* <Profile /> */}
       <BookUser />
+
       <Footer />
     </div>
   );

@@ -15,3 +15,18 @@
   margin: 20px;
   background-color: white;
 }
+.book {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-image: linear-gradient(rgb(120, 81, 22), rgb(244, 191, 156));
+  color: rgb(255, 255, 255);
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vh;
+}
+.link {
+  text-decoration: none;
+  color: rgb(36, 26, 36);
+}
