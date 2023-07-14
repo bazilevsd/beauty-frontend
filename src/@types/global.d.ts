@@ -42,3 +42,27 @@ interface Token {
 interface Open {
   open: boolean;
 }
+
+interface Date {
+  date: string;
+}
+
+interface TimeSlot {
+  time: string;
+  available: boolean;
+  firstName: string;
+  lastName: string;
+  phoneNumber: string;
+  email: string;
+  reason: string;
+}
+interface AppointDay {
+  _id?: number;
+  date: string;
+  bookingTimes: Array<TimeSlot>;
+}
+// interface AppointmentDay {
+//   id: string;
+//   date: string;
+//   bookingTimes: Array<TimeSlot>;
+// }

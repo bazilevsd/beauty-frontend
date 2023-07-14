@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useUserStore } from "../stores/useUserStore";
 import * as userService from "../utilities/user-services";
 import styles from "./LoginForm.module.scss";
 
 //@ts-ignore
 export default function LoginForm({ setUser }) {
+  const { settingUser } = useUserStore();
   const [credentials, setCredentials] = useState({
     email: "",
     password: "",
@@ -19,7 +21,7 @@ export default function LoginForm({ setUser }) {
     evt.preventDefault();
     try {
       const user = await userService.login(credentials);
-      setUser(user);
+      settingUser(user);
     } catch (error) {
       //@ts-ignore
       setError(error.message);
@@ -28,7 +30,7 @@ export default function LoginForm({ setUser }) {
 
   return (
     <div className={styles.LoginForm}>
-      <div className="form-container">
+      <div className={styles.container}>
         <form
           className={styles.form}
           autoComplete="off"

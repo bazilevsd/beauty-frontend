@@ -8,7 +8,11 @@ export default function AuthPage({ setUser }) {
 
   return (
     <main className={styles.AuthPage}>
+      <h1>Log In</h1>
       <div>
+        <LoginForm setUser={setUser} />
+      </div>
+      {/* <div>
         <h3 onClick={() => setShowLogin(!showLogin)}>
           {showLogin ? "SIGN UP" : "LOG IN"}
         </h3>
@@ -18,7 +22,7 @@ export default function AuthPage({ setUser }) {
       ) : (
         //@ts-ignore
         <SignUpForm setUser={setUser} />
-      )}
+      )} */}
     </main>
   );
 }

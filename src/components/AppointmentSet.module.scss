@@ -1,0 +1,60 @@
+.AppointmentSet {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 100vw;
+}
+@media screen and (max-width: 900px) {
+  .AppointmentSet {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.TimeSlotButton {
+  background-color: #fff0f5;
+  border: solid 1px;
+  border-radius: 20px;
+  min-width: 100px;
+  min-height: 40px;
+}
+
+.TimeSlotButton:disabled,
+button[disabled] {
+  background-color: white;
+}
+.TimeSlotButtonPicked {
+  background-color: #d8bfd8;
+  border: solid 1px;
+  border-radius: 20px;
+  min-width: 100px;
+  min-height: 40px;
+}
+
+.NewSet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // width: 28vw;
+  padding-left: 10px;
+  padding-top: 10px;
+  row-gap: 10px;
+}
+.UpdateSet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // width: 28vw;
+  padding-right: 10px;
+  row-gap: 10px;
+}
+
+.submitButton {
+  background-color: #d8bfd8;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  width: 120px;
+  height: 40px;
+}

@@ -11,9 +11,6 @@ export default function NavLinks({ open, onClose }) {
         }}
         className={styles.flex}
       >
-        <p onClick={onClose} className={styles.closeBtn}>
-          X
-        </p>
         <Link className={styles.link} to="/">
           Home
         </Link>
@@ -29,6 +26,9 @@ export default function NavLinks({ open, onClose }) {
         <Link className={styles.link} to="/products">
           Products
         </Link>
+        <button onClick={onClose} className={styles.closeBtn}>
+          Close Menu
+        </button>
       </div>
     </div>
   );

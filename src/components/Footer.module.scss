@@ -1,6 +1,7 @@
 .Footer {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 49% 49%;
+  width: 100vw;
   // background-color: rgb(251, 172, 185);
   background-image: linear-gradient(
     to bottom right,
@@ -13,9 +14,18 @@
 .link {
   text-decoration: none;
   color: rgb(36, 26, 36);
+  margin: 5px;
 }
 
-.flex {
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: none;
+  //   background-color: #fee6f6;
+  color: rgb(36, 26, 36);
+}
+.rightSide {
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -1,0 +1,81 @@
+.AppointmentGet {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  width: 100vw;
+  min-height: 60vw;
+}
+@media screen and (max-width: 900px) {
+  .AppointmentGet {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
+}
+
+.TimeSlotButton {
+  background-color: #fff0f5;
+  border: solid 1px;
+  border-radius: 20px;
+  min-width: 100px;
+  height: 40px;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.TimeSlotButtonPicked {
+  background-color: #d8bfd8;
+  border: none;
+  border-radius: 20px;
+  min-width: 100px;
+  height: 40px;
+}
+
+.subForm {
+  visibility: visible;
+}
+.subFormHidden {
+  visibility: hidden;
+}
+.allSlotsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+.allSlots {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.oneSlot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2%;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+.inputForm {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.subForm {
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.submitButton {
+  background-color: #d8bfd8;
+  border: none;
+  border-radius: 20px;
+  width: 120px;
+  height: 40px;
+}
+.inputField {
+  background-color: #fff0f5;
+  border: solid 1px grey;
+  border-radius: 5%;
+  width: 200px;
+}

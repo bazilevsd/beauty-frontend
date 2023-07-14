@@ -5,7 +5,6 @@ import NavLinks from "./NavLinks";
 import { AiTwotonePhone, AiOutlineMail } from "react-icons/ai";
 import { RiMapPinUserFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import Modal from "./Modal";
 import styless from "./Title.module.scss";
 
 interface Text {
@@ -43,17 +42,11 @@ export const Header: React.FC<Text> = ({ text }) => {
       </div>
       <div className={styles.nav}>
         <TiThMenu
+          style={{ width: "40px", height: "40px" }}
           onClick={() => {
-            // setOpenModal(true);
-            setOpenNav(true);
+            setOpenNav((current) => (current = !openNav));
           }}
         />
-        {/* <Modal
-          open={openModal}
-          text="The 3D Model store was our second unit project at GA. It uses react without backend."
-          onClose={() => setOpenModal(false)}
-        /> */}
-
         <NavLinks open={openNav} onClose={() => setOpenNav(false)} />
       </div>
     </div>

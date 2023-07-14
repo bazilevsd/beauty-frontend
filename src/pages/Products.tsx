@@ -14,9 +14,11 @@ export default function Products() {
     <div>
       <Header text={pageName} />
       <div>
-        <Link className={styles.link} to="/">
-          <div className={styles.book}>Book a session </div>
-        </Link>
+        <button className={styles.bookingBtn}>
+          <Link className={styles.link} to="/schedule">
+            CLICK HERE TO SCHEDULE AN APPOINTMENT
+          </Link>
+        </button>
         <div className={styles.block}>
           <img className={styles.img} src={image1} alt="blog-image-1.jpeg" />
           <p>

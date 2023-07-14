@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Header } from "../components/Header";
 import Book from "../components/Book";
-import Dashboard from "./Dashboard";
-import Loogin from "../components/Login";
-import Signup from "../components/Signup";
-import Profile from "../components/Profile";
-import BookUser from "../components/BookUser";
 import image1 from "/blog-image-2.jpeg";
 import Footer from "../components/Footer";
 import styles from "./MainPage.module.scss";
 import image11 from "/img11.jpg";
-import styless from "../components/Title.module.scss";
+import { Link } from "react-router-dom";
 
 //👇🏻 React-Toastify configuration
 import { ToastContainer } from "react-toastify";
@@ -21,15 +16,15 @@ export default function MainPage() {
 
   return (
     <div>
-      {/* Main Page */}
-      {/* <div className={styless.wrapper}>
-        <div className={styless.bg}>Nano Tam</div>
-        <div className={styless.bg}>Nano Tam</div>
-      </div> */}
       <Header text={pageName} />
       <div className={styles.MainPage}>
         <img className={styles.img} src={image1} alt="blog-image-1.jpeg" />
       </div>
+      <button className={styles.bookingBtn}>
+        <Link className={styles.link} to="/schedule">
+          CLICK HERE TO SCHEDULE AN APPOINTMENT
+        </Link>
+      </button>
       <div className={styles.intro}>
         <img className={styles.img1} src={image11} alt="img1" />
         <p>
@@ -57,12 +52,6 @@ export default function MainPage() {
         </p>
       </div>
       {/* <Book /> */}
-      {/* <Loogin />
-      <Signup /> */}
-      {/* <Dashboard /> */}
-      {/* <Profile /> */}
-      <BookUser />
-
       <Footer />
     </div>
   );

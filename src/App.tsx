@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Products from "./pages/Products";
 import Admin from "./pages/Admin";
+import Schedule from "./pages/Schedule";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/products" element={<Products />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/schedule" element={<Schedule />} />
       </Routes>
       {/* <Footer /> */}
     </div>

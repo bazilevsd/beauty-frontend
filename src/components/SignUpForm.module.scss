@@ -5,12 +5,17 @@
   align-content: space-around;
 }
 
+.SignUpForm .container {
+  display: flex;
+  justify-content: center;
+}
+
 .SignUpForm .form {
   display: flex;
   flex-direction: column;
   align-content: space-between;
   width: 30rem;
-  height: 32rem;
+  height: 20rem;
   //   row-gap: 10px;
   background-color: rgb(229, 206, 245);
   margin: 3vmin 2vmin;

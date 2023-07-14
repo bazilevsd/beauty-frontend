@@ -4,12 +4,18 @@ import image8 from "/img8.jpg";
 import image7 from "/img7.jpg";
 import styles from "./About.module.scss";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 export default function About() {
   const [pageName, setPageName] = useState("About Us");
   return (
     <div>
       <Header text={pageName} />
+      <button className={styles.bookingBtn}>
+        <Link className={styles.link} to="/schedule">
+          CLICK HERE TO SCHEDULE AN APPOINTMENT
+        </Link>
+      </button>
       <div className={styles.article}>
         <img className={styles.img1} src={image8} alt="blog-image-1.jpeg" />
         <p className={styles.p}>

@@ -1,6 +1,5 @@
 import { Component } from "react";
 import { signUp } from "../utilities/user-services";
-// import { useUserStore } from "../stores/useUserStore";
 import styles from "./SignUpForm.module.scss";
 
 export default class SignUpForm extends Component {
@@ -33,20 +32,21 @@ export default class SignUpForm extends Component {
       delete formData.confirm;
       //@ts-ignore
       const user = await signUp(formData);
+      console.log("My user", user);
+
       //@ts-ignore
-      this.props.setUser(user);
+      settingUser(user);
     } catch (error) {
       console.log(error);
       this.setState({ error: "Sign Up Failed" });
     }
   };
   render() {
-    // const { signUp } = useUserStore();
     //@ts-ignore
     const disable = this.state.password !== this.state.confirm;
     return (
       <div className={styles.SignUpForm}>
-        <div className="form-container">
+        <div className={styles.container}>
           <form
             className={styles.form}
             autoComplete="off"

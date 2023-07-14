@@ -17,3 +17,20 @@
 .intro {
   margin: 25px;
 }
+
+.bookingBtn {
+  margin-top: 20px;
+  // background-color: #6b5a87;
+  background-image: linear-gradient(rgb(120, 81, 22), rgb(244, 191, 156));
+  color: rgb(255, 255, 255);
+  width: 320px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: medium;
+  font-weight: bolder;
+}
+
+.link {
+  text-decoration: none;
+  color: #281a0a;
+}

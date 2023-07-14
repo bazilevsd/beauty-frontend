@@ -5,8 +5,10 @@ import { getUser } from "../utilities/user-services";
 //@ts-ignore
 
 interface UserStore {
-  userData: UserData;
+  user: UserData | null;
   credentials: Credentials;
+  settingUser: (user: UserData | null) => Promise<void>;
+  settingUserNull: (user: UserData | null) => Promise<void>;
   signUp: (userData: UserData) => Promise<void>;
   login: (credentials: Credentials) => Promise<void>;
   getToken: () => Promise<string | null | undefined>;
@@ -14,8 +16,19 @@ interface UserStore {
 }
 
 export const useUserStore = create<UserStore>((set, get) => ({
-  userData: { name: "", email: "", password: "", confirm: "", error: "" },
+  // userData: { name: "", email: "", password: "", confirm: "", error: "" },
+  user: getUser(),
   credentials: { email: "", password: "" },
+  settingUser: async (user: UserData | null) => {
+    set((state) => ({
+      user: user,
+    }));
+  },
+  settingUserNull: async (user: UserData | null) => {
+    set((state) => ({
+      user: null,
+    }));
+  },
   signUp: async (userData: UserData) => {
     try {
       const token: any = await userService.signUp(userData);

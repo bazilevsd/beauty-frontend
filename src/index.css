@@ -5,7 +5,8 @@
 
   /* color-scheme: light dark; */
   color: rgba(26, 24, 24, 0.87);
-  background-color: rgb(217, 207, 207);
+  background-color: #fff0f5;
+  width: fit-content;
   /* background-color: #fee6f6; */
 
   font-synthesis: none;
@@ -20,6 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   place-items: center;
+  width: fit-content;
   min-width: 320px;
   min-height: 100vh;
 }

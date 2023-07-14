@@ -5,7 +5,7 @@ import styles from "./Footer.module.scss";
 export default function Footer() {
   return (
     <div className={styles.Footer}>
-      <div className={styles.flex}>
+      <div className={styles.leftSide}>
         <Link className={styles.link} to="/">
           Home
         </Link>
@@ -22,11 +22,11 @@ export default function Footer() {
           Products
         </Link>
       </div>
-      {/* <div>
+      <div className={styles.rightSide}>
         <Link className={styles.link} to="/admin">
-          Services
+          Admin Access
         </Link>
-      </div> */}
+      </div>
     </div>
   );
 }

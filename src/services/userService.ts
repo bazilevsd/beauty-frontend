@@ -5,7 +5,7 @@ class UserService {
   private instance: AxiosInstance;
   constructor() {
     this.instance = axios.create({
-      baseURL: "http://localhost:3000",
+      baseURL: "https://beauty-site-backend.herokuapp.com/",
     });
     this.instance.interceptors.response.use(this.responseInterceptor);
   }

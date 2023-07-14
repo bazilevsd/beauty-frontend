@@ -1,18 +1,18 @@
 import { logOut } from "../utilities/user-services";
 import styles from "./LogOut.module.scss";
+import { useUserStore } from "../stores/useUserStore";
 //@ts-ignore
-export default function UserLogOut({ user, setUser }) {
+export default function UserLogOut() {
+  const { user, settingUserNull } = useUserStore();
   console.log(user);
   function handleLogOut() {
     logOut();
-    setUser(null);
+    settingUserNull;
   }
 
   return (
     <div>
-      <div>{user.name}</div>
-      <div className={styles.LogOut}>{user.email}</div>
-      <button className="btn-sm" onClick={handleLogOut}>
+      <button className={styles.submitButton} onClick={handleLogOut}>
         LOG OUT
       </button>
     </div>

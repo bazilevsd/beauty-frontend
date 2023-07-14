@@ -9,10 +9,13 @@ import dotenv from "dotenv";
 
 export const sendEmail = (
   //   receiverEmail: string,
+  firstName: string,
+  lastName: string,
+  phoneNumber: string,
   email: string,
-  fullName: string,
-  message: string,
-  duration: string
+  reason: string,
+  appDate: string | undefined,
+  appTime: string
 ) => {
   console.log(
     "process.env.YOUR_SERVICE_ID",
@@ -26,11 +29,15 @@ export const sendEmail = (
       `${import.meta.env.VITE_YOUR_TEMPLATE_ID}`,
 
       {
-        // to_email: receiverEmail,
+        to_email: email,
         from_email: email,
-        fullName,
-        message,
-        duration,
+        firstName,
+        lastName,
+        phoneNumber,
+        email,
+        reason,
+        appDate,
+        appTime,
       },
       `${import.meta.env.VITE_YOUR_PUBLIC_KEY}`
     )
