@@ -1,6 +1,6 @@
 # Beauty Web site
 
-Link to the site pending
+https://lustrous-fenglisu-3f1911.netlify.app/
 
 # About the project
 The project has separate repositories for front and back end. Backend is express and MongoDB (Mongoose) written in TypeScript. Frontend is Vite written in TypeScript. 
