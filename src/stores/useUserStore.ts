@@ -55,7 +55,7 @@ export const useUserStore = create<UserStore>((set, get) => ({
       const token = window.localStorage.getItem("token");
       // getItem will return null if no key
       if (!token) return null;
-      const payload = JSON.parse(atob(token.split(".")[1]));
+      const payload = JSON.parse(window.atob(token.split(".")[1]));
       // A JWT's expiration is expressed in seconds, not miliseconds
       if (payload.exp < Date.now() / 1000) {
         // Token has expired
